@@ -10,6 +10,7 @@ using System.Web.UI.WebControls;
 
 namespace WebApplication1
 {
+
     public partial class usersignup : System.Web.UI.Page
     {
         string strcon = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
@@ -19,6 +20,9 @@ namespace WebApplication1
         // sign up button click event
         protected void Button1_Click(object sender, EventArgs e)
         {
+
+
+
             if (checkMemberExists())
             {
 
@@ -28,6 +32,8 @@ namespace WebApplication1
             {
                 signUpNewMember();
             }
+
+
         }
 
         // user defined method
@@ -40,7 +46,7 @@ namespace WebApplication1
                 {
                     con.Open();
                 }
-                SqlCommand cmd = new SqlCommand("SELECT * from member_master_table where member_id='" + TextBox8.Text.Trim() + "';", con);
+                SqlCommand cmd = new SqlCommand("SELECT * from member_master_tbl where member_id='" + TextBox8.Text.Trim() + "';", con);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -69,7 +75,7 @@ namespace WebApplication1
                 {
                     con.Open();
                 }
-                SqlCommand cmd = new SqlCommand("INSERT INTO member_master_table(full_name,dob,contact_no,email,state,city,pincode,full_address,member_id,password,account_status) values(@full_name,@dob,@contact_no,@email,@state,@city,@pincode,@full_address,@member_id,@password,@account_status)", con);
+                SqlCommand cmd = new SqlCommand("INSERT INTO member_master_tbl(full_name,dob,contact_no,email,state,city,pincode,full_address,member_id,password,account_status) values(@full_name,@dob,@contact_no,@email,@state,@city,@pincode,@full_address,@member_id,@password,@account_status)", con);
                 cmd.Parameters.AddWithValue("@full_name", TextBox1.Text.Trim());
                 cmd.Parameters.AddWithValue("@dob", TextBox2.Text.Trim());
                 cmd.Parameters.AddWithValue("@contact_no", TextBox3.Text.Trim());
