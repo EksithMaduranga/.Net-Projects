@@ -12,7 +12,8 @@
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="bootstrap/cust.css" rel="stylesheet" />
     <%--datatables css--%>
-     <%--datatables css--%>
+     <%--datatables css--%><script src="datatables/js/jquery.dataTables.min.js"></script>
+    <link href="datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
     <link href="datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
      <%--fontawesome css--%>
     <link href="fontawsome/css/all.css" rel="stylesheet" /> 
