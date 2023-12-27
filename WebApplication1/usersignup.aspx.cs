@@ -29,7 +29,7 @@ namespace WebApplication1
             if (checkMemberExists())
             {
 
-                Response.Write("<script>alert('Member Already Exist with this Member ID, try other ID');</script>");
+                Response.Write("<script>alert('Member Already Exist with this Member ID, try Another ID or Report to the Admin');</script>");
             }
             else
             {
@@ -71,7 +71,7 @@ namespace WebApplication1
         void signUpNewMember()
         {
             //comment below JS code nit is just for checking purpose
-            Response.Write("<script>alert('Testing');</script>");
+            Response.Write("<script>alert('Testing The Connection For database');</script>");
             try
             {
                 SqlConnection con = new SqlConnection(strcon);
@@ -79,7 +79,7 @@ namespace WebApplication1
                 {
                     con.Open();
                 }
-                SqlCommand cmd = new SqlCommand("INSERT INTO member_master_tabel(full_name,dob,contact_no,email,state,city,pincode,full_address,member_id,password,account_status) values(@full_name,@dob,@contact_no,@email,@state,@city,@pincode,@full_address,@member_id,@password,@account_status)", con);
+                SqlCommand cmd = new SqlCommand("INSERT INTO member_master_tbl(full_name,dob,contact_no,email,state,city,pincode,full_address,member_id,password,account_status) VALUES (@full_name,@dob,@contact_no,@email,@state,@city,@pincode,@full_address,@member_id,@password,@account_status)", con);
                 cmd.Parameters.AddWithValue("@full_name", TextBox1.Text.Trim());
                 cmd.Parameters.AddWithValue("@dob", TextBox2.Text.Trim());
                 cmd.Parameters.AddWithValue("@contact_no", TextBox3.Text.Trim());
