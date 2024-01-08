@@ -44,7 +44,7 @@
                         </div>
 
                         <div class="form-group">
-                            <asp:Button ID="Button1" CssClass="btn btn-success btn-block" runat="server" Text="LogIn" />
+                            <asp:Button ID="Button1" CssClass="btn btn-success btn-block" runat="server" Text="LogIn" OnClick="Button1_Click" />
                         </div>
                         <div class="form-group">
                             <a href="usersignup.aspx"><input id="Button2" class="btn btn-info btn-block" type="button" value="Signup" /></a>
