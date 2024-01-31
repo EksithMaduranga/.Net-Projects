@@ -13,7 +13,7 @@ using System.IO;
 
 namespace WebApplication1
 {
-    public partial class adminbookinventory : System.Web.UI.Page
+   public partial class adminbookinventory : System.Web.UI.Page
     {
         string strcon = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
         static string global_filepath;
